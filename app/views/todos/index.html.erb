@@ -1,9 +1,26 @@
 <title>My lovely Todo App </title>
-<h1>My lovely Todo App</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="span4">
+
+<h1>My Todo App</h1>
+
+<hr>
 <p>My todo list:</p>
 
+<%= form_tag("/todos/add", :method=>"post") do %>
+  <%= text_field_tag(:todo_text) %>
+  <%= submit_tag("Add todo", :class=>"btn") %>
+<% end %>
+
+ <div class="well">
 <% @todo_items.each do |t| %>
   <li> <%= t.todo_item %> </li>
 <% end %>
-
+<hr>
 <a href="/todos/delete">Delete last todo</a>
+</div> <!-- well -->
+    </div> <!-- span4 -->
+  </div> <!-- row -->
+</div> <!-- container -->
