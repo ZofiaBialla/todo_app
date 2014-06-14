@@ -325,7 +325,7 @@ a:focus {
 }
 
 .span4 {
-  width: 300px;
+  width: 400px;
 }
 
 .span3 {
@@ -3559,6 +3559,7 @@ button.btn,
 input[type="submit"].btn {
   *padding-top: 3px;
   *padding-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 button.btn::-moz-focus-inner,
