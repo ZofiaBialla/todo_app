@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   match "todos/index" => "todos#index", :as => :index, via: [:get, :post]
   get '/todos/delete'
   match "todos/add" => "todos#add", :via => :post
+  match 'todos/complete' => 'todos#complete', :via => :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
