@@ -19,6 +19,7 @@ class TodosController < ApplicationController
 
   def delete
     Todo.last.delete
+    redirect_to :action => 'index'
   end 
 
 end
